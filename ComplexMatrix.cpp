@@ -38,7 +38,7 @@ ComplexMatrix& ComplexMatrix::operator=(const ComplexMatrix & matrix)
 
 ComplexMatrix ComplexMatrix::operator*(const ComplexMatrix & matrix) const
 {
-	if (_columns != matrix._rows) // умножение возможно, если число столбцов первой матрицы равно числу строк второй матрицы
+	if (_columns != matrix._rows) 
 		throw std::logic_error("Error in multiplication of matrixes.");
 
 	ComplexMatrix result;
