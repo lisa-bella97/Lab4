@@ -7,9 +7,9 @@
 class ComplexMatrix
 {
 private:
-	std::vector<std::vector<ComplexNumber>> _matrix; // матрица
-	unsigned int _rows; // кол-во строк
-	unsigned int _columns; // кол-во столбцов
+	std::vector<std::vector<ComplexNumber>> _matrix; 
+	unsigned int _rows; 
+	unsigned int _columns; 
 public:
 	ComplexMatrix();
 	ComplexMatrix(const ComplexMatrix& matrix);
