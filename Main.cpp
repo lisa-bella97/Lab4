@@ -52,53 +52,35 @@ int main()
 		fout << result3 << endl;
 		fout << result4 << endl;
 		fout.close();
-	}
-	catch(logic_error& e)
-	{
-      cerr << e.what() << endl;
-	}
-	catch(out_of_range& e)
-	{
-      cerr << e.what() << endl;
-	}
-	/*try
-	{
-		ComplexNumber num;
-		ifstream fin("Complex.txt");
-		if (!fin.is_open())
-			cout << "Файл не может быть открыт!\n";
-		else
-			fin >> num;
-	}
-	catch (char* message)
-	{
-		cout << message;
-	}*/
-
-	
-	/*try
-	{
 		ComplexMatrix matrix;
 		ifstream fin("Complex.txt");
 		if (!fin.is_open())
-			cout << "Файл не может быть открыт!\n";
+			cout << "Error in opening file\n";
 		else
 			fin >> matrix;
+		fin.close();
 	}
-	catch (char* message)
+	catch(logic_error& e)
 	{
-		cout << message;
-	}*/
+      		cerr << e.what() << endl;
+	}
+	catch(out_of_range& e)
+	{
+      		cerr << e.what() << endl;
+	}
 
-	/*char s[20];
-	cin >> s;
-	if (!strtod(s, NULL))
-		cout << "Error";
-	else
-	{
-		double d = strtod(s, NULL);
-		cout << d;
-	}*/
+	for (int i = 0; i < 2; i++)
+		matrix1[i].clear();
+	matrix1.clear();
+
+	for (int i = 0; i < 3; i++)
+		matrix2[i].clear();
+	matrix2.clear();
+
+	for (int i = 0; i < 2; i++)
+		matrix3[i].clear();
+	matrix3.clear();
+	
 	system("pause");
 	return 0;
 }
