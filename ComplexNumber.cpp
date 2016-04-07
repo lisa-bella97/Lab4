@@ -1,8 +1,9 @@
 #include "ComplexNumber.h"
 
-double BeforePlus(std::string str, int pos); // в случае успешного выполнения возвращает действительную часть комплексного числа
-double AfterPlus(std::string str, int pos); // в случае успешного выполнения возвращает мнимую часть комплексного числа
-void BetweenNumbers(std::string str, int pos); // проверяет наличие каких-либо сомволов между числами
+/* Parsing Functions */
+double BeforePlus(std::string str, int pos); 
+double AfterPlus(std::string str, int pos);
+void BetweenNumbers(std::string str, int pos); 
 char ChangeSymbol(char& symbol);
 
 std::vector<ComplexNumber> ComplexNumber::GetNumbersFromString(std::string source)
@@ -124,7 +125,7 @@ double AfterPlus(std::string str, int pos)
 	substr[pos - k] = '\0';
 	char* ptrEnd;
 	double res = strtod(substr, &ptrEnd);
-	bool flag = false; // нахождится ли i в записи числа
+	bool flag = false; 
 	for (int i = 0; i < strlen(ptrEnd); i++)
 	{
 		if (ptrEnd[i] == 'i')
@@ -153,5 +154,3 @@ char ChangeSymbol(char& symbol)
 	}
 	return symbol;
 }
-
-
