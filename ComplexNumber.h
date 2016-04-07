@@ -8,13 +8,13 @@
 class ComplexNumber
 {
 private:
-	double _real; // действительная часть
-	double _imaginary; // мнимая часть
+	double _real; 
+	double _imaginary; 
 public:
 	ComplexNumber() : _real(0.0), _imaginary(0.0) { }
 	ComplexNumber(double r, double im) : _real(r), _imaginary(im) { }
 	ComplexNumber(const ComplexNumber& num) : _real(num._real), _imaginary(num._imaginary) { }
-	static std::vector<ComplexNumber> GetNumbersFromString(std::string source); // статический метод для нахождения комплексных чисел в строке
+	static std::vector<ComplexNumber> GetNumbersFromString(std::string source); 
 	ComplexNumber& operator=(const ComplexNumber & number);
 	ComplexNumber operator+(const ComplexNumber & number) const;
 	ComplexNumber operator*(const ComplexNumber & number) const;
